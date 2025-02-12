@@ -56,7 +56,7 @@
     <th>Expires on</th>
   </tr>
 
-  <% @the_board.posts.each do |post| %>
+  <% @the_board.active_posts.each do |post| %>
     <tr>
       <td>
         <%= post.title %>
@@ -86,5 +86,25 @@
     <th>Posted on</th>
     <th>Expired on</th>
   </tr>
+
+    <% @the_board.expired_posts.each do |post| %>
+    <tr>
+      <td>
+        <%= post.title %>
+      </td>
+
+      <td>
+        <%= post.body %>
+      </td>
+
+      <td>
+        <%= post.created_at %>
+      </td>
+
+      <td>
+        <%= post.expires_on %>
+      </td>
+    </tr>
+  <% end %>
 
 </table>
