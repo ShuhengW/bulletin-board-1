@@ -33,7 +33,7 @@
 <hr>
 
 <ul>
-  <% @list_of_boards.each do |board| %>
+  <% @boards.each do |board| %>
     <li>
       <a href="/boards/<%= board.id %>">
         <%= board.name %>

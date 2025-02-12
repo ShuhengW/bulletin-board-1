@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # Routes for the Post resource:
 
+  get("/", { :controller => "homepage", :action => "index" })
   # CREATE
   post("/insert_post", { :controller => "posts", :action => "create" })
           
